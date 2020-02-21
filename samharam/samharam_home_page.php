@@ -1,0 +1,357 @@
+<?php
+/**
+ * The template for displaying all pages
+ * Template Name: Samharam Home
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package samharam
+ */
+global $samharam_opt;
+get_header();
+?>
+
+<div class="call_to_action">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 acurate">
+				<div class="row">
+
+				<div class="col-lg-12 col-md-14">
+					<div class="content" style="width: 1225px;">
+						<p><?php echo esc_html($samharam_opt['samharam_welcome_text']);?></p>
+						</div>
+					</div>
+
+					<div class="col-lg-10 col-md-12">
+						<div class="content">
+							<p style="width:1150px;margin-top:30px;"><strong><?php echo esc_html($samharam_opt['samharam_action_text']);?> - </strong><?php echo esc_html($samharam_opt['samharam_action_content']);?> </p>
+						</div>
+					</div>
+
+					<!--div class="col-lg-2 col-md-12" style="margin-top:30px;">
+						<div class="button">
+							<a href="<?php echo esc_html($samharam_opt['samharam_action_button_url']);?>"><?php echo esc_html($samharam_opt['samharam_action_button']);?></a>
+						</div>
+					</div-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="mession_vission_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 acurate">
+				<div class="mession_area">
+					<div class="icon"  style="display:none">
+						<?php $url = $samharam_opt['mission_image']['url'] ?>
+						<img src="<?php echo esc_attr($url ); ?>" alt="<?php bloginfo('name') ?>">
+					</div>
+					<div class="content">
+						<h3><?php echo esc_html($samharam_opt['mission_title']);?> </h3>
+						<p><?php echo wp_kses_post($samharam_opt['mission_content']);?></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 acurate">
+				<div class="vission_area">
+					<div class="icon"  style="display:none">
+						<?php $url1 = $samharam_opt['vission_image']['url'] ?>
+						<img src="<?php echo esc_attr($url1 ); ?>" alt="<?php bloginfo('name') ?>">
+					</div>
+					<div class="content">
+						<h3><?php echo esc_html($samharam_opt['vission_title']);?> </h3>
+						<p><?php echo wp_kses_post($samharam_opt['vission_content']);?></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="video_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="content">
+					<h3><?php echo esc_html($samharam_opt['video_title']);?></h3>
+					<p><?php echo wp_kses_post($samharam_opt['video_content']);?></p>
+					<div class="button">
+						<a href="<?php echo esc_html($samharam_opt['video_button_url']);?>"><?php echo esc_html($samharam_opt['video_button']);?></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="video">
+					<a href="<?php echo esc_html($samharam_opt['video_url']);?>" class="video-popup">
+						<?php $url1 = $samharam_opt['video_image']['url'] ?>
+						<img src="<?php echo esc_attr($url1 ); ?>" alt="<?php bloginfo('name') ?>">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="chairman_message">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="chairman_image">
+				    <div class="inner-image">
+						<?php $url1 = $samharam_opt['chairman_image']['url'] ?>
+						<img src="<?php echo esc_attr($url1 ); ?>" alt="<?php bloginfo('name') ?>">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="content">
+					<h3><?php echo esc_html($samharam_opt['message_title']);?></h3>
+					<p><?php echo wp_kses_post($samharam_opt['message_content']);?></p>
+					<div class="designation">
+						<h4> <?php echo esc_html($samharam_opt['chairman_name']);?></h4>
+						<span><?php echo esc_html($samharam_opt['designation']);?></span>
+						<?php $signature = $samharam_opt['signature_image']['url'] ?>
+						<!--p><img src="<?php echo esc_attr($signature ); ?>" alt="<?php bloginfo('name') ?>"></p-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $url_bg = $samharam_opt['facilities_image']['url'] ?>
+<div class="facilities_area background-image" data-src="<?php echo $url_bg;?>">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2><?php echo esc_html($samharam_opt['facilities_title']);?></h2>
+			</div>
+		</div>
+	</div>
+	<div class="facilities_list">
+		<div class="container-fluid acurate">
+			<div class="row acurate">
+				<?php
+					$count =1;
+					$facilities = new WP_Query(array(
+						'post_type' => 'samharam_facilities',
+						'posts_per_page'=> 6,
+						'order' => 'ASC'
+						));
+						while($facilities -> have_posts()): $facilities->the_post();
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumbnail' );
+				?>
+				<div class="col-lg-4 col-md-6 col-sm-12 text-center acurate">
+					<div class="single-facilities single-facilities_<?php echo $count;?>">
+						<div class="icon">
+							<?php  the_post_thumbnail();?>
+						</div>
+						<div class="content">
+							<h3><?php the_title();?></h3>
+							<p><?php the_content();?></p>
+						</div>
+					</div>
+				</div>
+				<?php
+					$count++;
+					endwhile; // End of the loop.
+					wp_reset_query();
+				?>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="testimonial_area">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2><?php echo esc_html($samharam_opt['testimonial_title']);?></h2>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-lg-9 mx-auto">
+				<div class="testimonail-slider owl-carousel">
+					<?php
+						$testimonial = new WP_Query(array(
+						'post_type' => 'samharam_testimonial',
+						'posts_per_page'=> -1
+						));
+						while($testimonial -> have_posts()): $testimonial->the_post();
+					?>
+
+						<div class="single-testimonail">
+							<div class="image">
+								<?php  the_post_thumbnail();?>
+							</div>
+							<div class="content">
+								<p><?php echo wp_trim_words( get_the_content(), 35, '');?></p>
+								<h3>- <?php the_title();?></h3>
+							</div>
+						</div>
+					<?php
+						endwhile; // End of the loop.
+						wp_reset_query();
+					?>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="our_topper_students_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2><?php echo esc_html($samharam_opt['ourtopper_title']);?></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 ml-auto text-right">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<?php
+							$count =1;
+							$studnet_terms = get_terms( 'topperstudents_cat', array(
+								'order' => 'DESC'
+							) );
+                            if ( ! empty( $studnet_terms ) && ! is_wp_error( $studnet_terms ) ){
+                                foreach ( $studnet_terms as $term ) {?>
+									<li class="nav-item">
+										<a class="nav-link <?php if($count==1){echo "active";}?>" data-toggle="tab" href="#<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></a>
+									</li>
+								<?php
+							     $count++;
+								}
+							}
+                        ?>
+                </ul>
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="topper_content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="tab-content  wow fadeInUp" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;" data-wow-delay="0.3s" id="myTabContent">
+								<?php
+									$count =1;
+									$studnet_terms = get_terms( 'topperstudents_cat', array(
+										'order' => 'DESC'
+									) );
+									if ( ! empty( $studnet_terms ) && ! is_wp_error( $studnet_terms ) ){
+										foreach ( $studnet_terms as $term ) {
+											$termid = $term->term_id;
+											//print_r($term);
+								?>
+								<div class="tab-pane fade  <?php if($count==1){ echo 'show active';}?>" id="<?php echo esc_attr($term->slug); ?>">
+									<div class="row">
+											<?php
+													$count=1;
+													$args = array(
+													'post_type'        => 'topperstudents',
+													'tax_query' => array(
+														array(
+														'taxonomy' => 'topperstudents_cat',
+														'field' => 'term_id',
+														'terms' => $termid,
+														'include_children' => true,
+																'operator' => 'IN'
+														 )
+														),
+													'post_status' => array('publish'),
+													'posts_per_page' => 6// no limit
+												);
+												$current_user_posts = get_posts( $args );
+												foreach($current_user_posts as $post){
+												$post_ID = $post->ID;
+											?>
+												<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+													<div class="single-topper">
+															<?php the_post_thumbnail();?>
+															<div class="content">
+																<h4><?php the_title();?></h4>
+																<p> <?php echo CFS()->get( 'our_topper_roll_number' );?></p>
+															</div>
+													</div>
+												</div>
+											<?php
+											}
+										?>
+									</div>
+								</div>
+								<?php
+							     		$count++;
+										}
+									}
+                ?>
+              </div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="board_trustees_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2><?php // echo esc_html($samharam_opt['trustees_title']);?>OWNER'S</h2>
+				<p>	<?php //echo esc_html($samharam_opt['trustees_subtitle']);?>Owner's at Samharam Bilingual Private School</p>
+			</div>
+		</div>
+<style>
+.owl-next,.owl-prev{
+    display:none;
+}
+.image img{
+	border: 4px solid #85375E;
+}
+</style>
+		<div class="row mt-3">
+			<div class="col-lg-12">
+				<div class="board_trustees_slider owl-carousel">
+					<?php
+						$testimonial = new WP_Query(array(
+						'post_type' => 'samharam_trustees',
+						'posts_per_page'=> -1
+						));
+						while($testimonial -> have_posts()): $testimonial->the_post();
+					?>
+
+					<div class="single_samharam_trustees">
+						<div class="image">
+							<?php  the_post_thumbnail();?>
+						</div>
+						<div class="content">
+							<h3><?php the_title();?></h3>
+							<?php the_content(); ?>
+						</div>
+					</div>
+
+					<?php
+						endwhile; // End of the loop.
+						wp_reset_query();
+					?>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php get_footer();
