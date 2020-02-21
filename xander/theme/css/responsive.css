@@ -1,0 +1,240 @@
+@media only screen and (max-width:1920px) {
+	
+}
+
+@media only screen and (max-width:1680px) {
+
+}
+
+@media only screen and (max-width:1600px) {
+
+}
+
+@media only screen and (max-width:1440px) {
+
+}
+
+@media only screen and (max-width:1366px) {
+
+}
+
+@media only screen and (max-width:1199px) {
+	.hero-col h1 {
+		font-size: 50px;
+	}
+	.sm_next {
+	    right: 78px;
+	}
+	#sm_submenu {
+		margin-top: 0;
+	}
+	.sm_slider-inner {
+	    height: 430px !important;
+	}
+	.sm_prev, .sm_next {
+		top: 25%;
+	}
+	.partner-area .owl-theme .owl-nav [class*=owl-] {
+		padding: 10px 0;
+	}
+	.portfolio-area .gallery-filters ul li {
+		margin: 0 5px;
+	}
+	.blog-item-text ul li {
+		margin-right: 10px;
+	}
+}
+
+@media only screen and (max-width:1024px) {
+
+}
+
+@media only screen and (max-width:991px) {
+	/* Nav CSS Start */
+	.navbar-light .navbar-toggler {
+		background: #ffffff;
+		border-radius: 0;
+		padding: 10px 10px;
+		margin-top: 10px;
+	}
+	.navbar-light .navbar-brand {
+		margin-top: 10px;
+	}
+	.navbar {
+		padding: 0 15px;
+	}
+	.navbar-nav {
+		background: #F5F6FF;
+		margin-top: 10px;
+		-webkit-box-shadow: 0px 10px 40px -13px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 10px 40px -13px rgba(0,0,0,0.75);
+		box-shadow: 0px 10px 40px -13px rgba(0,0,0,0.75);
+	}
+	.navbar-expand-lg .navbar-nav .nav-link,
+	.main-header.scroll-to-fixed .navbar-expand-lg .navbar-nav .nav-link {
+		color: #a1a1a1;
+		padding: 12px 20px;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link:hover {
+		color: #2b32b2;
+	}
+	.navbar-light .navbar-nav .nav-link.active {
+		color: #2b32b2;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link:before,
+	.navbar-expand-lg .navbar-nav .nav-link:before,
+	.navbar-expand-lg .navbar-nav .nav-link:hover:before,
+	.navbar-expand-lg .navbar-nav .nav-link:hover:after,
+	.navbar-light .navbar-nav .nav-link.active:after,
+	.navbar-light .navbar-nav .nav-link.active:before {
+		display: none;
+	}
+	.scroll-to-fixed .navbar-light .navbar-brand {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.scroll-to-fixed .navbar-light .navbar-toggler {
+		margin-top: 3px;
+	}
+	/* Nav CSS End */
+
+	.hero-area {
+		height: auto;
+		padding: 180px 0 120px;
+		background-position: inherit;
+	}
+	.hero-area .hero-col {
+		height: auto;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.hero-col h1 {
+		margin-top: 0;
+		color: #ffffff;
+	}
+	.hero-col p {
+		color: #ffffff;
+	}
+	.sm_submenu-item {
+		margin: 0;
+		width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.sm_slider-inner {
+	    height: 315px !important;
+	}
+	.sm_prev, .sm_next {
+	    top: 14%;
+	}
+	.sm_next {
+	    right: 67px;
+	}
+	.about-area .about-col,
+	.about-area .about-col .title-col {
+		text-align: center;
+	}
+	.goto-down {
+		display: none;
+	}
+	.service-area {
+		padding-top: 35px;
+	}
+	.blog-para {
+		opacity: 1;
+		-ms-transform: scaleY(1);
+    	-webkit-transform: scaleY(1);
+    	transform: scaleY(1);
+	}
+	.blog-area .owl-theme .owl-nav {
+	    margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width:767px) {
+	#demo {
+		width: 100%;
+	}
+	.sm_slider-inner {
+	    height: 270px !important;
+	}
+	.sm_next {
+	    right: 32px;
+	}
+	.sm_prev, .sm_next {
+	    top: 12%;
+	}
+	.portfolio-area .masonry-gallery .grid {
+		width: 50%;
+	}
+	.portfolio-area .gallery-filters ul {
+		margin-bottom: 60px;
+	}
+	.portfolio-area .gallery-filters ul li {
+		margin-bottom: 20px;
+	}
+	.portfolio-area .gallery-filters ul li a {
+		padding: 8px 28px;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	
+}
+
+@media only screen and (max-width:575px) {
+	.sm_slider-inner {
+		display: none;
+	}
+	.sm_prev, .sm_next {
+		display: none;
+	}
+	.sm_submenu-item {
+		padding: 20px 20px;
+	}
+	.sm_submenu-item.active {
+		padding: 20px 20px;
+	}
+	.portfolio-area .masonry-gallery .grid {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.hero-col h1 {
+	    font-size: 36px;
+	}
+	.portfolio-area .gallery-filters ul li {
+		display: block;
+	}
+	.portfolio-area .gallery-filters ul li a {
+		display: block;
+	}
+
+}
+
+@media only screen and (max-width:420px) {
+	.hero-col .theme-btn {
+		margin-bottom: 10px;
+	}
+	.title-col h2 {
+		font-size: 30px;
+	}
+	.about-area .about-col .theme-btn {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.about-area {
+		padding: 120px 0 80px;
+	}
+}
+
+@media only screen and (max-width:375px) {
+	.hero-col h1 {
+	    font-size: 30px;
+	}
+}
+
+@media only screen and (max-width:320px) {
+
+}
