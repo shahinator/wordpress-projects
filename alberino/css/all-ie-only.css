@@ -1,0 +1,8 @@
+.header{
+    display: none !important;
+}
+
+.ie11 .header {
+    display:none !important;
+}
+
