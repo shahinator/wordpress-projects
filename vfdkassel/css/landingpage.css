@@ -1,0 +1,480 @@
+.single-insurence .hero-content {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 20px;
+    text-align: center;
+}
+
+.single-insurence .hero-content h1 {
+    font-size: 45px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    color: #169fe6;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.single-insurence .hero-content small {
+    font-size: 30px;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.single-insurence .hero-content p {
+    font-size: 24px;
+    color: #4a4a4a;
+}
+
+.hero-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #efefef url(../images/hospital-room.jpg) center bottom no-repeat;
+    background-size: cover;
+}
+
+
+.homepage-link {
+    margin-top: 10px;
+    margin-left: 180px;
+    display: inline-block;
+}
+
+@media (min-width: 400px) {
+    .homepage-link {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .homepage-link {
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .single-insurence .hero-content {
+        padding: 40px;
+    }
+
+    .hero-container {
+        min-height: 600px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .single-insurence .hero-content h1 {
+        font-size: 72px;
+        line-height: 70px;
+    }
+
+    .single-insurence .hero-content small {
+        font-size: 46px;
+    }
+
+    .single-insurence .hero-content p {
+        font-size: 30px;
+    }
+
+}
+
+
+
+
+.single-insurence .hero-content .hero-price {
+    display: inline-block;
+    background-color: #169fe6;
+    color: white;
+    padding: 10px 40px;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.btn {
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    color: #169fe6;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+.single-insurence .hero-content .btn {
+    margin-top: 20px;
+}
+
+.hero-logos {
+    margin-top: 25px;
+}
+
+.hero-logos--form {
+    margin-bottom: 30px;
+}
+
+.module {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.module-blue {
+    background-color: #169fe6;
+    color: white;
+}
+
+.module-gray {
+    background-color: #f5f4fa;
+}
+
+
+.benefit {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-hinweise {
+    margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+
+    .benefit {
+        text-align: left;
+    }
+
+    .footer-hinweise {
+        margin-bottom: 0;
+    }
+
+}
+
+.stoerer {
+    text-align: center;
+}
+@media (min-width: 992px) {
+
+    .stoerer {
+        text-align: left;
+    }
+
+    .text-md-right {
+        text-align: right;
+    }
+
+}
+
+.benefit-icon {
+    background-color: #169fe6;
+    padding: 40px;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    line-height: 85px;
+    margin: 0 auto;
+}
+
+.benefit-icon img {
+    height: 80px;
+}
+
+h2 {
+    font-family: 'Noto Serif', serif;
+    color: #169fe6;
+}
+
+
+.benefit h2 {
+    font-size: 26px;
+}
+
+.module-blue h2 {
+    color: white;
+}
+
+.btn-xl {
+    margin-top: 30px;
+    padding: 20px 40px;
+    font-size: 18px;
+    color: white;
+    border-color: white;
+}
+
+.tarif {
+    padding: 15px;
+    margin-top: 120px;
+    background: white;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+    overflow: visible;
+    position: relative;
+}
+
+.tarif-reccomended {
+    border: 1px solid #169fe6;
+
+}
+
+.tarif-reccomended-icon  {
+    position: absolute;
+    top: -4px;
+    right: 10px;
+    z-index: 5;
+}
+
+.tarif-reccomended-icon img {
+    width: 32px;
+    height: 42px;
+}
+
+
+.tarif-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 8px solid #f5f4fa;
+    margin: 0 auto;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.tarif-logo img {
+    width: 80px;
+    display: block;
+    margin: 50px auto;
+}
+
+.tarif-content {
+    text-align: center;
+}
+
+.tarif h3 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: 'Noto Serif', serif;
+
+}
+
+.tarif ul {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tarif li {
+    position: relative;
+    list-style-type: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.tarif li::before {
+    background: url("../images/icons/check-solid.svg") center center no-repeat;
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    margin-left: -20px;
+    position: absolute;
+}
+
+.hinweis-ktg p {
+    margin-top: 10px;
+    color: #169fe6;
+    font-weight: bold;
+}
+
+.hinweis-ktg {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.hinweis-ktg--notavailable {
+    height: 70px;
+}
+
+.tarif .btn {
+    font-size: 12px;
+}
+@media (min-width: 1200px) {
+    .tarif .btn {
+        font-size: 14px;
+    }
+
+}
+
+.rating blockquote {
+    border-left: none;
+    color: white;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 20px;
+}
+
+
+.rating blockquote footer {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.download {
+    margin-bottom: 50px;
+}
+
+.download h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-family: 'Noto Serif', serif;
+
+}
+
+.download img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.download .btn {
+    margin-top: 10px;
+}
+
+.download-wrapper {
+    margin-top: 50px;
+}
+
+.angebot-form {
+    padding: 25px;
+    color: #242424;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.angebot-form .btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post-zusatz {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+input {
+    border-radius: 4px;
+}
+
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    color: #777;
+}
+
+.page-footer img {
+    margin-left: 10px;
+    opacity: .6;
+}
+
+.page-footer a:hover img {
+    opacity: .8;
+}
+
+.footer-hinweise {
+    font-size: 18px;
+    font-family: 'Noto Serif', serif;
+    text-transform: uppercase;
+}
+
+
+
+
+.text-no-wrap {
+    white-space: nowrap!important;
+}
+
+#cookielaw a {
+    color: #000;
+    text-decoration: none;
+}
+
+#cookielaw a:hover {
+    text-decoration: underline;
+}
+
+#cookielaw div {
+    padding: 10px;
+    padding-right: 40px;
+}
+
+#cookielaw {
+    outline: 1px solid #7b92a9;
+    text-align: right;
+    border-top: 1px solid #fff;
+    background: #d6e0eb;
+    background: -moz-linear-gradient(top, #d6e0eb 0%, #f2f6f9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d6e0eb), color-stop(100%, #f2f6f9));
+    background: -webkit-linear-gradient(top, #d6e0eb 0%, #f2f6f9 100%);
+    background: -o-linear-gradient(top, #d6e0eb 0%, #f2f6f9 100%);
+    background: -ms-linear-gradient(top, #d6e0eb 0%, #f2f6f9 100%);
+    background: linear-gradient(to bottom, #d6e0eb 0%, #f2f6f9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6e0eb', endColorstr='#f2f6f9', GradientType=0);
+    position: fixed;
+    bottom: 0px;
+    z-index: 10000;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#cookielawCloser {
+    color: #777;
+    font: 14px/100% arial, sans-serif;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    top: 5px;
+    cursor: pointer;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid #7b92a9;
+    border-right: 1px solid #7b92a9;
+    padding: 4px;
+    background: #ced6df;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ced6df0%, #f2f6f9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ced6df), color-stop(100%, #f2f6f9));
+    background: -webkit-linear-gradient(top, #ced6df0%, #f2f6f9 100%);
+    background: -o-linear-gradient(top, #ced6df0%, #f2f6f9 100%);
+    background: -ms-linear-gradient(top, #ced6df0%, #f2f6f9 100%);
+    background: linear-gradient(to bottom, #ced6df0%, #f2f6f9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ced6df', endColorstr='#f2f6f9', GradientType=0);
+}
+
+#cookielawCloser:hover {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid #7b92a9;
+    border-left: 1px solid #7b92a9;
+}
+
+.transition {
+    -webkit-transition: all 200ms ease-in-out;
+-moz-transition: all 200ms ease-in-out;
+-ms-transition: all 200ms ease-in-out;
+-o-transition: all 200ms ease-in-out;
+transition: all 200ms ease-in-out;
+}
