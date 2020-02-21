@@ -1,0 +1,168 @@
+<?php
+/**
+ * The template for displaying all pages
+ * Template Name: Services Page
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Application
+ */
+global $application_opt;
+
+get_header();
+?>
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2><?php the_title();?></h2>
+                <ol class="breadcrumb">
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html('Home','application')?></a></li>
+                    <li><?php the_title();?></li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<div class="services-page-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <h2><?php echo esc_html($application_opt['services_title']);?></h2>
+                <p><?php echo wp_kses_post($application_opt['services_content']);?></p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="container-fluild">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php    
+                            $count =1;    
+                            $services = get_posts(array(
+                                'post_type' => 'services',
+                                'posts_per_page' => -1,
+                                'order'   => 'ASC',
+                            ));
+                            
+                        ?>
+                        <?php 
+
+     
+
+                            $myarray= array_chunk($services, 3, true);
+                            $count = 0;
+                            foreach($myarray as $array){ 
+                                $count++;
+                                foreach($array as $maindata){
+                                    // echo "<pre>";
+                                    // print_r($maindata);
+                                    // echo "</pre>";
+                                    // $url = wp_get_attachment_url( get_post_thumbnail_id() );
+                                    // $image = Siga_Resize( $url, 1200, 600, true, true, true );
+                                   ?>
+                                    <div class="single-service" id="<?php  echo application_make_slug(the_title()); ?>">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="images">
+                                                    <?php 
+                                                        $image_id= get_post_thumbnail_id( $maindata->ID );
+                                                        $url = wp_get_attachment_image_src($image_id, 'full');
+                                                                                                               
+                                                    ?>
+                                                    <img src="<?php echo $url[0];?>" alt="">
+                                                    <div class="content-area">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4">
+                                                                <div class="small-image">
+                                                                <?php 
+                                                                    $image = get_post_meta($maindata->ID, 'upload_services_small_image', true);
+                                                                    $url = wp_get_attachment_image_src($image, 'full');
+                                                                    if( !empty( $image ) ): ?>
+                                                                        <img src="<?php echo $url[0]; ?>" alt="title" />
+                                                                    <?php endif; 
+                                                                    ?>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-8">
+                                                                <div class="content"> 
+                                                                    <h4><?php echo $maindata->post_title; ?></h4>
+                                                                    <div class="inner-content">
+                                                                        <?php
+                                                                        $str = $maindata->post_content;
+                                                                        $Allpics = explode(" ",$str);
+
+                                                                        $countRecords  = count($Allpics);
+
+                                                                        //dividing array in to two array
+                                                                        $col1 = array_slice($Allpics, 0, $countRecords/2 + 0.5);
+                                                                        $col2 = array_slice($Allpics, $countRecords/2 + 0.5, $countRecords);
+
+                                                                        $row = array("column1" => $col1, "column2" => $col2);
+
+                                                                        echo '<div class="row"><div class="col-md-6">';
+                                                                        foreach ($row['column1'] as $string1){
+                                                                        echo $string1.' ';
+                                                                        }
+
+                                                                        echo '</div><div class="col-md-6">';
+                                                                        foreach ($row['column2'] as $string2){
+                                                                        echo $string2.' ';
+                                                                        }
+                                                                        echo '</div></div>';
+                                                                        ?>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .row END -->
+                                    </div> 
+                                   <?php
+                                }
+                                if($count==1){?>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-lg-offset-3 text-center">
+                                            <h2><?php echo esc_html($application_opt['services_title2']);?></h2>
+                                            <p><?php echo wp_kses_post($application_opt['services_content2']);?></p>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                                if($count==2){?>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-lg-offset-3 text-center">
+                                            <h2><?php echo esc_html($application_opt['services_title3']);?></h2>
+                                            <p><?php echo wp_kses_post($application_opt['services_content3']);?></p>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                                if($count==3){
+                                    
+                                }
+                                
+                            }
+
+
+                        ?>                       
+                        
+                        <?php 
+                            $count++;
+                            //endwhile; // End of the loop.
+                            wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
+            </div><!-- .container END -->
+        </div>
+    </div>
+</div>
+<?php
+get_footer();
